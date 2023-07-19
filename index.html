@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" id="root-element">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    
+
+    <div id="title-screen">
+        <img src="assets/title.png" alt="Rock Paper Scissor" class="title-img animate__bounceIn">
+        <h1 id="start-btn">START</h1>
+
+        <div class="attributes" >
+            <p>COPYRIGHT @<span id="currentYear"></span> <a href="https://github.com/settings/profile">Co</a></p>
+        </div>
+
+        
+    </div>
+
+
+    <div id="main-game"  class="swing-in-top-fwd">
+        <div class="p1-area">
+        <h1>PLAYER
+            <br>HEALTH: <span id="p-health">10</span>
+        </h1>
+        
+            <ul id="ul-choices">
+                <li id="rock" onclick="rockClick()">
+                    <i class="fa-sharp fa-solid fa-hand-back-fist"   style="color: #408080;"></i>
+                    <p>THE ROCK</p>
+                </li>
+                <li id="paper" onclick="paperClick()">
+                    <i class="fa-sharp fa-solid fa-hand"   style="color: #650a53;"></i>
+                    <p>THE PAPER</p>
+                </li>
+                <li id="scissor" onclick="scissorClick()">
+                    <i class="fa-sharp fa-solid fa-hand-scissors fa-rotate-90"   style="color: #ff0080;"></i>
+                    <p>THE SCISSOR</p>
+                </li>
+            </ul>
+        </div>
+
+        <h1 id="winner-txt"></h1>
+
+        <div class="ai-area">
+                <ul>
+                    <li id="ai-rock" class="flip-horizontal">
+                        <i class="fa-sharp fa-solid fa-hand-back-fist" style="color: #408080;"></i>
+                        <p>THE ROCK</p>
+                    </li>
+                    <li id="ai-aper" class="flip-horizontal">
+                        <i class="fa-sharp fa-solid fa-hand" style="color: #650a53;"></i>
+                        <p>THE PAPER</p>
+                    </li>
+                    <li id="ai-scissor" class="flip-horizontal">
+                        <i class="fa-sharp fa-solid fa-hand-scissors fa-rotate-90" style="color: #ff0080;"></i>
+                        <p>THE SCISSOR</p>
+                    </li>
+                </ul>
+            
+            <h1>AI
+                <br>HEALTH: <span id="ai-health">10</span>
+            </h1>
+            
+        </div>
+
+    </div>
+
+
+    <div id="winning-modal" class="scale-in-center">
+        <div>
+            <ul>
+                <li><i  id="enterICON"></i> </li>
+                <li><h1 id="whoWin">PLAYER WINS</h1></li>
+            </ul>
+            
+            
+            
+    
+            <ul>
+                <li id="retry-btn" onclick="retry()">RETRY</li>
+                <li id="main-menu" onclick="mainMenu()">Main Menu</li>
+            </ul>
+        </div> 
+    </div>
+
+    
+    
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2baad037ae.js" crossorigin="anonymous"></script>
+</body>
+</html>
